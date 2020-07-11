@@ -1,17 +1,38 @@
 ``` js
 function isValid(arr) {
-  for(var i=0; i<arr.length; i++) {
-    if (arr[i] <= 0) return 'invalid'
+  //迴圈（一）
+  for(var i=0; i<arr.length; i++) {//1
+    if (arr[i] <= 0) return 'invalid'//2
   }
-  for(var i=2; i<arr.length; i++) {
-    if (arr[i] !== arr[i-1] + arr[i-2]) return 'invalid'
-  }
-  return 'valid'
-}
+  //迴圈（一）
 
+  //迴圈（二）
+  for(var i=2; i<arr.length; i++) {//3
+    if (arr[i] !== arr[i-1] + arr[i-2]) return 'invalid'//4
+  }
+  //迴圈（二）
+
+  return 'valid'//5
+}
 isValid([3, 5, 8, 13, 22, 35])
 ```
-
 ## 執行流程
-1. ..
-2. ..
+迴圈（一）
+1. 設變數i = 0 //1
+2. 判斷i是否小於arrㄉ長度 =>是 //1
+3. 判斷arr的第i項是否小於等於0 =>沒有 //2
+4. 變數i+1//1
+5. i這時=1 回到第1.2.3.4 
+6. i這時=2 回到第1.2.3.4 
+7. i這時=3 回到第1.2.3.4 
+8. i這時=4 回到第1.2.3.4 
+9. i這時=5 回到第1.2.3.4 
+10. i這時=6 回到第1.2.=>判斷i是否小於arrㄉ長度 =>否 =>離開迴圈
+迴圈（二）
+1. 設變數i = 2 //3
+2. 判斷i是否小於arrㄉ長度 =>是 //3
+3. 判斷arr的第i項是否不等於arr的第i-1項+arr的第i-2項 =>沒有 //4
+4. 變數i+1//1
+5. i這時=3 回到第1.2.3.4 
+6. i這時=4 回到第1.2.3.=>判斷arr的第i項是否不等於arr的第i-1項+arr的第i-2項 =>是 //4
+7. 回傳invalid =>離開function

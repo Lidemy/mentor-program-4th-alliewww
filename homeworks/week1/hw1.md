@@ -23,3 +23,5 @@
 - 點選 Compare & pull request 或是 New pull request 找你ㄉbranch
 - 然後 Create pull request
 15.  去 learning.lidemy 回報狀況
+16.  助教 merge 完後 pull 回本地
+17.  git branch -d 寫作業ㄉ那個分支
